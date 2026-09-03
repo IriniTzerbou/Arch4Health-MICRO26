@@ -1,2 +1,2 @@
-# arch4health-ics26
-Arch4Health Workshop @ ICS 2026
+# arch4health-micro2026
+Arch4Health Workshop @ MICRO 2026
