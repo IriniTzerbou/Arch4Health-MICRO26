@@ -137,11 +137,11 @@ We invite abstract submissions related to (but not limited to) the following top
   <div class="organizer">
     <div class="photo-name">
       <img src="{{ 'nika_pic.jpeg' | relative_url }}" alt="Nika Mansouri Ghiasi">
-      <p><a href="https://sites.google.com/view/nikamansourighiasi/" style="color: inherit; text-decoration: none;">Nika Mansouri Ghiasi</a></p>
+      <p><a href="https://sites.google.com/view/nikamansourighiasi/" style="color: inherit; text-decoration: none;">Dr. Nika Mansouri Ghiasi</a></p>
     </div>
     <div class="bio">
       <p>Email: <a href="mailto:nika.mansourighiasi@safari.ethz.ch">nika.mansourighiasi@safari.ethz.ch</a></p>
-      <p>Nika Mansouri Ghiasi is a PhD student in the SAFARI Research Group at ETH Zurich, advised by Professor Onur Mutlu. Her research interests are in computer architecture and computational biology, focusing on 1) storage systems, large-scale bioinformatics applications, and their interactions, and 2) emerging technologies such as ultra-dense 3D integrated systems. She is interested in designing high-performance, energy-efficient, and low-cost systems that facilitate the widespread adoption of data-intensive applications needed in healthcare and precision medicine. For more information, please see her website: <a href="https://bit.ly/nikamgh">bit.ly/nikamgh</a>.</p>
+      <p>Nika Mansouri Ghiasi is a senior researcher in the SAFARI Research Group at ETH Zurich, where she recently obtained her PhD advised by Professor Onur Mutlu. Nika is currently on the academic job market for tenure-track faculty positions. Her research spans across the computing stack to tackle computational challenges in healthcare, life sciences, and beyond. She is especially excited about designing high-performance, energy-efficient, and low-cost systems for (i) widespread adoption of data-intensive applications in healthcare and life sciences and (ii) enabling new solutions that were out of reach before, both in these domains and in other critical domains, such as AI/ML. Her research has received various honors and recognitions, such as induction to the ISCA hall of fame in 2026, selected as one of the 20 young researchers to attend and present at the Heidelberg Leaureatte Forum in 2026, ETH Doc.Mobility Fellowship (supporting her visiting research period at Stanford University), and ACM SRC Grand Finalist at PACT 2024. For more information, please check her website: <a href="https://nikamgh.github.io/">bit.ly/nikamgh</a>.</p>
     </div>
   </div>
 
