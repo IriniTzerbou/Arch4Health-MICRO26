@@ -208,16 +208,35 @@ We invite abstract submissions related to (but not limited to) the following top
     color: #333;
   }
 
-  /* Column widths */
+  /* Column widths — only take effect because of the <colgroup> in the table */
   table.agenda-table col:nth-child(1) { width: 15%; } /* Time */
-  table.agenda-table col:nth-child(2) { width: 35%; } /* Speaker */
+  table.agenda-table col:nth-child(2) { width: 35%; } /* Presenter */
   table.agenda-table col:nth-child(3) { width: 50%; } /* Title */
 
+  /* Keep time ranges on one line */
+  table.agenda-table td.time {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Affiliation shown under the presenter name */
+  table.agenda-table .affiliation {
+    display: block;
+    font-size: 0.85em;
+    color: #5a6b7a;
+    margin-top: 2px;
+  }
+
+  /* Optional zebra striping — delete this rule if you prefer plain white rows */
+  table.agenda-table tbody tr:nth-child(even):not(.break-row) {
+    background-color: #f7f9fb;
+  }
+
   /* Styling for Break rows */
-  tr.break-row {
+  table.agenda-table tr.break-row {
     background-color: #dae8f4; /* Light blue */
   }
-  tr.break-row td {
+  table.agenda-table tr.break-row td {
     font-weight: 600;
     color: #1C3F5A;
     text-align: center;      /* Center text horizontally */
@@ -225,7 +244,92 @@ We invite abstract submissions related to (but not limited to) the following top
   }
 </style>
 
-
+<table class="agenda-table">
+  <colgroup>
+    <col>
+    <col>
+    <col>
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Presenter and Other Authors</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="time">13:00 - 13:10</td>
+      <td>Organizers</td>
+      <td>Welcome</td>
+    </tr>
+    <tr>
+      <td class="time">13:10 - 14:00</td>
+      <td>
+        Onur Mutlu
+        <span class="affiliation">(ETH Zurich)</span>
+      </td>
+      <td>Accelerating Genome Analysis</td>
+    </tr>
+    <tr>
+      <td class="time">14:00 - 14:20</td>
+      <td>
+        Amina Sokoli, Abdullah Giray Yağlıkçı
+        <span class="affiliation">(CISPA Helmholtz Center for Information Security)</span>
+      </td>
+      <td>BeSA: Benchmarks for Simulating Agent-based Models in Architecture Research</td>
+    </tr>
+    <tr>
+      <td class="time">14:20 - 14:40</td>
+      <td>
+        Arturo Vicente-Jaén, Juan L. Aragón, Pablo Artal
+        <span class="affiliation">(Universidad de Murcia)</span>
+      </td>
+      <td>From Wi-Fi Offloading to On-Device NPU Inference: A Working Wearable for Presbyopia Correction</td>
+    </tr>
+    <tr>
+      <td class="time">14:40 - 15:00</td>
+      <td>
+        Weiqi Li<sup>1</sup>, Zihao Pu<sup>1</sup>, Mengyun Zhang<sup>2</sup>, Haiyu Mao<sup>1</sup>
+        <span class="affiliation">(<sup>1</sup>King&rsquo;s College London, <sup>2</sup>Tsinghua University)</span>
+      </td>
+      <td>STAGE-Med: An Interactive Multi-Agent Framework for Medical Diagnosis Based on Structured Action Spaces and Global Exploration</td>
+    </tr>
+    <tr class="break-row">
+      <td class="time">15:00 - 15:30</td>
+      <td colspan="2">Coffee Break</td>
+    </tr>
+    <tr>
+      <td class="time">15:30 - 16:15</td>
+      <td>
+        Giulia Guidi
+        <span class="affiliation">(Cornell University)</span>
+      </td>
+      <td>Sparse by Nature, Parallel by Design: HPC for the Life Sciences</td>
+    </tr>
+    <tr>
+      <td class="time">16:15 - 16:35</td>
+      <td>
+        Wonyoung Cheon, Timur Eke, Eirini Tzermpou, Konstantina Koliogeorgi, Nika Mansouri Ghiasi, Onur Mutlu
+        <span class="affiliation">(ETH Zurich)</span>
+      </td>
+      <td>Benchmarking and Accelerating Single-Cell Analysis</td>
+    </tr>
+    <tr>
+      <td class="time">16:35 - 16:55</td>
+      <td>
+        Peiyi He
+        <span class="affiliation">(The University of Hong Kong)</span>
+      </td>
+      <td>Towards Fast and Efficient Genomic Analysis with Analog In-Memory Computing Hardware</td>
+    </tr>
+    <tr>
+      <td class="time">16:55 - 17:00</td>
+      <td>Organizers</td>
+      <td>Concluding Remarks</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Previous Iteration {#previous-iteration}
 
