@@ -207,7 +207,11 @@ We invite abstract submissions related to (but not limited to) the following top
     vertical-align: top;
     color: #333;
   }
-
+  /* Underline the presenting author when there are multiple authors */
+  table.agenda-table .presenter {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
   /* Column widths — only take effect because of the <colgroup> in the table */
   table.agenda-table col:nth-child(1) { width: 15%; } /* Time */
   table.agenda-table col:nth-child(2) { width: 35%; } /* Presenter */
