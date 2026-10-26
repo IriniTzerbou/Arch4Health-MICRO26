@@ -274,7 +274,7 @@ We invite abstract submissions related to (but not limited to) the following top
     <tr>
       <td class="time">14:00 - 14:20</td>
       <td>
-        Amina Sokoli, Abdullah Giray Yağlıkçı
+        <span class="presenter">Amina Sokoli</span>, Abdullah Giray Yağlıkçı
         <span class="affiliation">(CISPA Helmholtz Center for Information Security)</span>
       </td>
       <td>BeSA: Benchmarks for Simulating Agent-based Models in Architecture Research</td>
@@ -282,7 +282,7 @@ We invite abstract submissions related to (but not limited to) the following top
     <tr>
       <td class="time">14:20 - 14:40</td>
       <td>
-        Arturo Vicente-Jaén, Juan L. Aragón, Pablo Artal
+        <span class="presenter">Arturo Vicente-Jaén</span>, Juan L. Aragón, Pablo Artal
         <span class="affiliation">(Universidad de Murcia)</span>
       </td>
       <td>From Wi-Fi Offloading to On-Device NPU Inference: A Working Wearable for Presbyopia Correction</td>
@@ -290,7 +290,7 @@ We invite abstract submissions related to (but not limited to) the following top
     <tr>
       <td class="time">14:40 - 15:00</td>
       <td>
-        Weiqi Li<sup>1</sup>, Zihao Pu<sup>1</sup>, Mengyun Zhang<sup>2</sup>, Haiyu Mao<sup>1</sup>
+        <span class="presenter">Weiqi Li</span><sup>1</sup>, Zihao Pu<sup>1</sup>, Mengyun Zhang<sup>2</sup>, Haiyu Mao<sup>1</sup>
         <span class="affiliation">(<sup>1</sup>King&rsquo;s College London, <sup>2</sup>Tsinghua University)</span>
       </td>
       <td>STAGE-Med: An Interactive Multi-Agent Framework for Medical Diagnosis Based on Structured Action Spaces and Global Exploration</td>
@@ -310,7 +310,7 @@ We invite abstract submissions related to (but not limited to) the following top
     <tr>
       <td class="time">16:15 - 16:35</td>
       <td>
-        Wonyoung Cheon, Timur Eke, Eirini Tzermpou, Konstantina Koliogeorgi, Nika Mansouri Ghiasi, Onur Mutlu
+        <span class="presenter">Wonyoung Cheon</span>, Timur Eke, Eirini Tzermpou, Konstantina Koliogeorgi, Nika Mansouri Ghiasi, Onur Mutlu
         <span class="affiliation">(ETH Zurich)</span>
       </td>
       <td>Benchmarking and Accelerating Single-Cell Analysis</td>
