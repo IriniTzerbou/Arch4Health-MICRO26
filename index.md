@@ -82,7 +82,7 @@
       radial-gradient(circle at calc(100% - 6px) 50%, var(--teal) 0 5px, transparent 5.5px),
       linear-gradient(var(--teal), var(--teal)) left center / calc(100% - 10px) 3px no-repeat;
   }
-  .a4h-hero .lede { font-size: 1.15rem; color: #B6CFDD; max-width: 52ch; margin-bottom: 1.5rem; }
+  .a4h-hero .lede { font-size: 1.15rem; color: #B6CFDD; max-width: 72ch; margin-bottom: 1.5rem; }
   .a4h-hero .actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.75rem; }
   .a4h-btn {
     display: inline-block; padding: 0.65rem 1.15rem; border-radius: 10px;
@@ -244,7 +244,7 @@
     {% assign a4h_title = site.title | default: "Fourth Workshop on Architecture for Health" %}
     {% assign a4h_parts = a4h_title | split: " on " %}
     <h1>{% if a4h_parts.size == 2 %}<span class="edition">{{ a4h_parts[0] }} on</span>{{ a4h_parts[1] }}{% else %}{{ a4h_title }}{% endif %}</h1>
-    <p class="lede">A half-day workshop exploring the key computational challenges in health-related applications and the vital role of computer architecture in overcoming them to advance healthcare.</p>
+    <p class="lede">A half-day workshop exploring<br>the key computational challenges in health-related applications and<br>the vital role of computer architecture in overcoming them to advance healthcare.</p>
     <div class="actions">
       <a class="a4h-btn solid" href="#agenda-materials">See the program</a>
     </div>
@@ -286,12 +286,12 @@
   <p class="intro">Sunday, 1 November 2026, 13:00 to 17:00 local time (EET, UTC+2), in room Ypsilon I. Presenting authors are underlined.</p>
   <ol class="a4h-program">
     <li class="minor" data-start="11:00" data-end="11:10"><span class="t">13:00 – 13:10</span><div><span class="title">Welcome</span><span class="aff">Organizers</span></div></li>
-    <li class="invited" data-start="11:10" data-end="12:00"><span class="t">13:10 – 14:00</span><div><span class="tag">Invited talk</span><span class="title">Accelerating Genome Analysis</span><span class="who">Onur Mutlu</span><span class="aff">ETH Zurich</span></div></li>
+    <li class="invited" data-start="11:10" data-end="12:00"><span class="t">13:10 – 14:00</span><div><span class="title">Accelerating Genome Analysis</span><span class="who">Onur Mutlu</span><span class="aff">ETH Zurich</span></div></li>
     <li data-start="12:00" data-end="12:20"><span class="t">14:00 – 14:20</span><div><span class="title">BeSA: Benchmarks for Simulating Agent-based Models in Architecture Research</span><span class="who"><span class="presenter">Amina Sokoli</span>, Abdullah Giray Yağlıkçı</span><span class="aff">CISPA Helmholtz Center for Information Security</span></div></li>
     <li data-start="12:20" data-end="12:40"><span class="t">14:20 – 14:40</span><div><span class="title">From Wi-Fi Offloading to On-Device NPU Inference: A Working Wearable for Presbyopia Correction</span><span class="who"><span class="presenter">Arturo Vicente-Jaén</span>, Juan L. Aragón, Pablo Artal</span><span class="aff">Universidad de Murcia</span></div></li>
     <li data-start="12:40" data-end="13:00"><span class="t">14:40 – 15:00</span><div><span class="title">STAGE-Med: An Interactive Multi-Agent Framework for Medical Diagnosis Based on Structured Action Spaces and Global Exploration</span><span class="who"><span class="presenter">Weiqi Li</span><sup>1</sup>, Zihao Pu<sup>1</sup>, Mengyun Zhang<sup>2</sup>, Haiyu Mao<sup>1</sup></span><span class="aff"><sup>1</sup>King’s College London, <sup>2</sup>Tsinghua University</span></div></li>
     <li class="minor break" data-start="13:00" data-end="13:30"><span class="t">15:00 – 15:30</span><div><span class="title">☕ Coffee break</span></div></li>
-    <li class="invited" data-start="13:30" data-end="14:15"><span class="t">15:30 – 16:15</span><div><span class="tag">Invited talk</span><span class="title">Sparse by Nature, Parallel by Design: HPC for the Life Sciences</span><span class="who">Giulia Guidi</span><span class="aff">Cornell University</span></div></li>
+    <li class="invited" data-start="13:30" data-end="14:15"><span class="t">15:30 – 16:15</span><div><span class="title">Sparse by Nature, Parallel by Design: HPC for the Life Sciences</span><span class="who">Giulia Guidi</span><span class="aff">Cornell University</span></div></li>
     <li data-start="14:15" data-end="14:35"><span class="t">16:15 – 16:35</span><div><span class="title">Benchmarking and Accelerating Single-Cell Analysis</span><span class="who"><span class="presenter">Wonyoung Cheon</span>, Timur Eke, Eirini Tzermpou, Konstantina Koliogeorgi, Nika Mansouri Ghiasi, Onur Mutlu</span><span class="aff">ETH Zurich</span></div></li>
     <li data-start="14:35" data-end="14:55"><span class="t">16:35 – 16:55</span><div><span class="title">Towards Fast and Efficient Genomic Analysis with Analog In-Memory Computing Hardware</span><span class="who">Peiyi He</span><span class="aff">The University of Hong Kong</span></div></li>
     <li class="minor" data-start="14:55" data-end="15:00"><span class="t">16:55 – 17:00</span><div><span class="title">Concluding remarks</span><span class="aff">Organizers</span></div></li>
