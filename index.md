@@ -82,7 +82,7 @@
       radial-gradient(circle at calc(100% - 6px) 50%, var(--teal) 0 5px, transparent 5.5px),
       linear-gradient(var(--teal), var(--teal)) left center / calc(100% - 10px) 3px no-repeat;
   }
-  .a4h-hero .lede { font-size: 1.15rem; color: #B6CFDD; max-width: 72ch; margin-bottom: 1.5rem; }
+  .a4h-hero .lede { font-size: 1.15rem; color: #B6CFDD; max-width: none; width: max-content; margin-bottom: 1.5rem; }
   .a4h-hero .actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.75rem; }
   .a4h-btn {
     display: inline-block; padding: 0.65rem 1.15rem; border-radius: 10px;
@@ -210,6 +210,7 @@
   /* ---------- Small screens ---------- */
   @media (max-width: 720px) {
     .a4h-hero { padding: 1.5rem 1.15rem 1.25rem; }
+    .a4h-hero .lede { width: auto; }
     .a4h-circuit { width: 70%; top: 0.5rem; right: -12%; opacity: 0.35; }
     .a4h-about, .a4h-cfp, .a4h-people { grid-template-columns: 1fr; }
     .a4h-dates { position: static; }
@@ -244,7 +245,7 @@
     {% assign a4h_title = site.title | default: "Fourth Workshop on Architecture for Health" %}
     {% assign a4h_parts = a4h_title | split: " on " %}
     <h1>{% if a4h_parts.size == 2 %}<span class="edition">{{ a4h_parts[0] }} on</span>{{ a4h_parts[1] }}{% else %}{{ a4h_title }}{% endif %}</h1>
-    <p class="lede">A half-day workshop exploring<br>the key computational challenges in health-related applications and<br>the vital role of computer architecture in overcoming them to advance healthcare.</p>
+    <p class="lede">A half-day workshop exploring<br>the key computational challenges in health-related applications and<br>the vital role of computer architecture in overcoming them to advance healthcare</p>
     <div class="actions">
       <a class="a4h-btn solid" href="#agenda-materials">See the program</a>
     </div>
