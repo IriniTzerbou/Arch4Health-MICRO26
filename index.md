@@ -4,6 +4,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
 <style>
+  /* ---------- The theme prints _config.yml's title as a big blue heading above the page.
+     The hero shows that title instead, so hide the theme's copy. ---------- */
+  .markdown-body > h1:first-child,
+  .a4h-theme-title-hidden { display: none !important; }
+
   /* ---------- Tokens ---------- */
   .a4h {
     --navy: #003156;
@@ -28,6 +33,7 @@
   .a4h a:focus-visible, .a4h summary:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 4px; }
   .a4h h2, .a4h h3, .a4h h4 { font-family: var(--display); font-weight: 700; color: var(--navy); letter-spacing: -0.01em; }
   .a4h p { margin: 0 0 0.9rem; }
+  .a4h-program li + li, .a4h-chips li + li, .a4h-dates li + li { margin-top: 0; }
 
   /* ---------- Sticky nav ---------- */
   .a4h-nav {
@@ -61,8 +67,20 @@
   .a4h-hero .logo { display: block; width: min(360px, 68vw); height: auto; }
   .a4h-hero h1 {
     font-family: var(--display); font-weight: 700; color: #fff;
-    font-size: clamp(1.9rem, 4.4vw, 3rem); line-height: 1.08; letter-spacing: -0.025em;
-    margin: 0 0 1rem; max-width: 18ch; border: 0; padding: 0;
+    font-size: clamp(2.1rem, 5.4vw, 3.4rem); line-height: 1.04; letter-spacing: -0.03em;
+    margin: 0 0 1rem; max-width: 16ch; border: 0; padding: 0; text-wrap: balance;
+  }
+  .a4h-hero h1 .edition {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-size: clamp(1.05rem, 2.2vw, 1.35rem); font-weight: 500; letter-spacing: 0;
+    color: var(--teal); margin-bottom: 0.45rem;
+  }
+  /* a short trace and node in front of the edition line, like the logo's wiring */
+  .a4h-hero h1 .edition::before {
+    content: ""; flex: none; width: 34px; height: 12px;
+    background:
+      radial-gradient(circle at calc(100% - 6px) 50%, var(--teal) 0 5px, transparent 5.5px),
+      linear-gradient(var(--teal), var(--teal)) left center / calc(100% - 10px) 3px no-repeat;
   }
   .a4h-hero .lede { font-size: 1.15rem; color: #B6CFDD; max-width: 52ch; margin-bottom: 1.5rem; }
   .a4h-hero .actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.75rem; }
@@ -204,7 +222,6 @@
 <nav class="a4h-nav" aria-label="Page sections">
   <a href="#description">About</a>
   <a href="#agenda-materials">Program</a>
-  <a href="#livestream">Livestream</a>
   <a href="#call-for-presentations">Call for Presentations</a>
   <a href="#key-dates">Key Dates</a>
   <a href="#organizers">Organizers</a>
@@ -224,11 +241,12 @@
   </svg>
   <div class="content">
     <div class="plaque"><img class="logo" src="{{ 'arch4health-logo3.png' | relative_url }}" alt="Arch4Health"></div>
-    <h1>Computer architecture for advancing healthcare</h1>
+    {% assign a4h_title = site.title | default: "Fourth Workshop on Architecture for Health" %}
+    {% assign a4h_parts = a4h_title | split: " on " %}
+    <h1>{% if a4h_parts.size == 2 %}<span class="edition">{{ a4h_parts[0] }} on</span>{{ a4h_parts[1] }}{% else %}{{ a4h_title }}{% endif %}</h1>
     <p class="lede">A half-day workshop exploring the key computational challenges in health-related applications and the vital role of computer architecture in overcoming them to advance healthcare.</p>
     <div class="actions">
       <a class="a4h-btn solid" href="#agenda-materials">See the program</a>
-      <a class="a4h-btn ghost" href="#livestream">Watch the livestream</a>
     </div>
   </div>
   <div class="a4h-facts">
@@ -278,15 +296,6 @@
     <li data-start="14:35" data-end="14:55"><span class="t">16:35 – 16:55</span><div><span class="title">Towards Fast and Efficient Genomic Analysis with Analog In-Memory Computing Hardware</span><span class="who">Peiyi He</span><span class="aff">The University of Hong Kong</span></div></li>
     <li class="minor" data-start="14:55" data-end="15:00"><span class="t">16:55 – 17:00</span><div><span class="title">Concluding remarks</span><span class="aff">Organizers</span></div></li>
   </ol>
-</section>
-
-<section class="a4h-section" id="livestream">
-  <h2>Livestream</h2>
-  <p class="intro">Can’t make it to Athens? The whole afternoon is streamed live on YouTube.</p>
-  <div class="a4h-video">
-    <iframe src="https://www.youtube.com/embed/L7hRn1h81bM" title="Arch4Health @ MICRO 2026 livestream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
-  </div>
-  <p style="margin-top:0.75rem;"><a href="https://youtube.com/live/L7hRn1h81bM">Open the stream on YouTube</a></p>
 </section>
 
 <section class="a4h-section" id="call-for-presentations">
@@ -383,6 +392,15 @@
   </div>
 </section>
 
+<section class="a4h-section" id="livestream">
+  <h2>Livestream</h2>
+  <p class="intro">Can’t make it to Athens? The whole afternoon is streamed live on YouTube.</p>
+  <div class="a4h-video">
+    <iframe src="https://www.youtube.com/embed/L7hRn1h81bM" title="Arch4Health @ MICRO 2026 livestream" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+  </div>
+  <p style="margin-top:0.75rem;"><a href="https://youtube.com/live/L7hRn1h81bM">Open the stream on YouTube</a></p>
+</section>
+
 <footer class="a4h-foot">
   Arch4Health is organized by the SAFARI Research Group at ETH Zurich. Questions? Email <a href="mailto:nika.mansourighiasi@safari.ethz.ch">Nika Mansouri Ghiasi</a>.
 </footer>
@@ -415,6 +433,15 @@
       var a = Date.parse("2026-11-01T" + rows[i].getAttribute("data-start") + ":00Z");
       var b = Date.parse("2026-11-01T" + rows[i].getAttribute("data-end") + ":00Z");
       rows[i].classList.toggle("now", now >= a && now < b);
+    }
+  }
+
+  /* Fallback: hide the theme's site-title heading, whatever the theme */
+  var siteTitle = {{ site.title | jsonify }};
+  if (siteTitle) {
+    var heads = document.querySelectorAll("h1, .site-title, .project-name");
+    for (var k = 0; k < heads.length; k++) {
+      if (!heads[k].closest(".a4h") && heads[k].textContent.trim() === siteTitle.trim()) heads[k].classList.add("a4h-theme-title-hidden");
     }
   }
 
